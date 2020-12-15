@@ -184,6 +184,12 @@ class Main:
 
 				self.camera_manager.on_click_down(current_event.button);
 
+			if current_event.type == pygame.KEYDOWN:
+				try:
+					self.gui_manager.get(game_gui.KEYBIND_GUI[current_event.key]).toggle();
+				except:
+					pass
+
 		keys = pygame.key.get_pressed();
 
 	def render_3D(self):
