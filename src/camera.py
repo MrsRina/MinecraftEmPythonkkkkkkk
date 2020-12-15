@@ -41,19 +41,6 @@ class Camera:
 	def calcule_z_from_angle(self, angle):
 		return cos(radians(angle));
 
-	def on_click_up(self, button):
-		if self.focused != True:
-			if button is 1:
-				pygame.mouse.set_pos(self.main.screen_width / 2, self.main.screen_height / 2);
-
-				if self.main.game_paused:
-					self.main.game_paused = False;
-
-				self.focused = True;
-
-	def on_click_down(self, button):
-		oi = "oi";
-
 	def focus(self):
 		self.focused = True;
 

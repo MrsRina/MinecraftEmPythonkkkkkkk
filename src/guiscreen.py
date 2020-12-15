@@ -8,15 +8,30 @@ class GUI:
 		self.active = False;
 
 	def open(self):
-		self.active = True;
+		if self.active == False:
+			self.opened();
+
+			self.active = True;
 
 	def close(self):
-		self.active = False;
+		if self.active == True:
+			self.closed();
+
+			self.active = False;
 
 	def toggle(self):
-		self.active = self.active != True;
+		if self.active:
+			self.close();
+		else:
+			self.open();
 
 	# Todos os overrides da GUI ou seja, quando desenharmos teremos que usar.
+	def closed(self):
+		override = True;
+
+	def opened(self):
+		override = True;
+
 	def on_click_up(self, button):
 		override = True;
 
@@ -28,7 +43,8 @@ class GUI:
 
 class GUIManager:
 	def __init__(self):
-		self.list_gui = [];
+		self.list_gui    = [];
+		self.current_gui = None; 
 
 	def add(self, gui):
 		self.list_gui.append(gui);
@@ -53,4 +69,6 @@ class GUIManager:
 	def update_render(self):
 		for guis in self.list_gui:
 			if guis.active:
+				self.current_gui = guis;
+
 				guis.on_render();

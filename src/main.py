@@ -127,6 +127,7 @@ class Main:
 
 		self.camera_manager.focused = True;
 
+		# Aqui a gente coloca as GUIs:
 		self.gui_manager.add(game_gui.GamePaused(self));
 
 		while (True):
@@ -177,12 +178,8 @@ class Main:
 			if current_event.type == pygame.MOUSEBUTTONUP:
 				self.gui_manager.update_click_up(current_event.button);
 
-				self.camera_manager.on_click_up(current_event.button);
-
 			if current_event.type == pygame.MOUSEBUTTONDOWN:
 				self.gui_manager.update_click_down(current_event.button);
-
-				self.camera_manager.on_click_down(current_event.button);
 
 			if current_event.type == pygame.KEYDOWN:
 				try:
@@ -201,6 +198,9 @@ class Main:
 	def render_2D(self):
 		self.overlay_manager.on_render();
 		self.gui_manager.update_render();
+
+		if None != type(self.gui_manager.current_gui):
+			self.font_renderer.draw("Noone GUI", 10, 10, [255, 0, 255]);
 
 if (__name__ == "__main__"):
 	game = Main();
