@@ -199,9 +199,6 @@ class Main:
 		self.overlay_manager.on_render();
 		self.gui_manager.update_render();
 
-		if None != type(self.gui_manager.current_gui):
-			self.font_renderer.draw("Noone GUI", 10, 10, [255, 0, 255]);
-
 if (__name__ == "__main__"):
 	game = Main();
 
