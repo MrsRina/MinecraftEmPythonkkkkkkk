@@ -78,6 +78,7 @@ class Camera:
 			self.set_yaw(  (rel[0]) * self.MOUSE_SENSIVITY);
 			self.set_pitch((rel[1]) * self.MOUSE_SENSIVITY);
 
+		pygame.event.set_grab(self.focused)
 		pygame.mouse.set_visible(self.focused != True);
 
 		if self.debug:

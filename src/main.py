@@ -15,7 +15,7 @@ import guiscreen;
 
 import game_gui;
 
-NAME    = "Survival Craft Python Edition"
+NAME    = "kkjkjkjk minecrafr e pytion"
 VERSION = "0.0.1";
 
 SHOW_VERSION = True;
@@ -127,7 +127,8 @@ class Main:
 
 		self.camera_manager.focused = True;
 
-		# Aqui a gente coloca as GUIs:
+		overlay.SPLIT = 0;
+
 		self.gui_manager.add(game_gui.GamePaused(self));
 
 		while (True):
@@ -190,8 +191,14 @@ class Main:
 		keys = pygame.key.get_pressed();
 
 	def render_3D(self):
-		color(255, 255, 255);
+		color(255, 0, 0);
 		render_polgyn(0, 0, -10, MASK_BLOCK);
+
+		color(0, 255, 0);
+		render_polgyn(0, 0, -20, MASK_BLOCK);
+
+		color(0, 0, 255);
+		render_polgyn(0, 0, -40, MASK_BLOCK);
 
 		self.camera_manager.update_camera(0.1, self.screen_width, self.screen_height);
 
