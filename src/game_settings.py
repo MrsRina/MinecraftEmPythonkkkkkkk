@@ -1,0 +1,8 @@
+CONFIG_STATIC_FOV = False;
+CONFIG_FOV        = 150;
+
+CONFIG_FULLSCREEN            = False;
+CONFIG_FULLSCREEN_RESOLUTION = [[1280, 720]];
+
+DEV_FOV_BASED_ON_SPEED = True;
+DEV_FOV                = 150;
