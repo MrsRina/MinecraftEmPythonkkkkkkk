@@ -79,7 +79,7 @@ class Main:
 
 		self.clock.tick(self.fps);
 
-		# Algumas coisas como peixes e negros.
+		# Algumas coisas como peixes.
 		self.font_renderer          = util.CustomTextRender("Verdana", 19);
 		self.last_delta_time        = 0;
 		self.camera_manager.focused = True;
@@ -221,7 +221,7 @@ class Main:
 				# nao e estatica, mas tem como k
 				self.camera_manager.set_pos(1, 1, 1);
 
-				# Meu amigro negro
+				# Meu amigro
 				self.player.velocity = 0;
 
 		self.entity_manager_.on_update();

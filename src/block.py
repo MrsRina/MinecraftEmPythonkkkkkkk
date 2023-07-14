@@ -12,7 +12,6 @@ class Face:
 		self.name = name;
 		self.face = util.Vec(0, 0, 0);
 
-# eu sou transexual, eu irei me assumir, se voce esta lendo saiba que eu sou.
 # - Rina.
 class Block:
 	def __init__(self, name, current_path_textures = None):
@@ -45,7 +44,7 @@ class Block:
 
 				path = os.path.join(os.path.abspath(current_path_textures + name + "_" + faces));
 
-				self.textures[faces] = util.convert_to_texture(pygame.image.load(path + ".png"));
+				self.textures[faces] = util.convert_to_texture(pygame.image.load(path + ".jpg"));
 
 		GL11.glNewList(self.render_list, GL11.GL_COMPILE);
 		GL11.glColor(1, 1, 1);

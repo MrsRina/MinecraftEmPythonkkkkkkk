@@ -23,7 +23,7 @@ class Skybox:
 		for sides in block.FACES:
 			file_path = os.path.join(os.path.abspath(path + sides));
 
-			self.textures[sides] = util.convert_to_texture(pygame.image.load(file_path + ".png"));
+			self.textures[sides] = util.convert_to_texture(pygame.image.load(file_path + ".jpg"));
 
 		self.list = GL11.glGenLists(1);
 

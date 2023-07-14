@@ -290,8 +290,6 @@ class EntityPlayer(Entity):
 			self.look_vec = self.get_rotation_vec(self.yaw, self.pitch);
 			self.raytrace = Vec(self.position.x + (self.look_vec.x * self.reach_distance), self.position.y + (self.look_vec.y * self.reach_distance), self.position.z + (self.look_vec.z * self.reach_distance));
 
-			print(self.raytrace.get());
-
 			self.speed = sqrt(self.speed_forward * self.speed_forward + self.speed_backward + self.speed_strafe * self.speed_strafe);
 
 			if not self.flag.get("OnGround") and not self.flag.get("Flying"):
