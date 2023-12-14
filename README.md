@@ -1,5 +1,5 @@
 The original repo was made early of 2020, with the purpose of teaching Python to a dear Friend,  
-but I miss nuked the repo, luckly the code was backup.
+but I miss nuked the repo, luckly the code had backup.
 
 it's like a Mainecréft, but it is in python and it's not like Mainecréft
 
