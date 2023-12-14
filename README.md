@@ -1,4 +1,5 @@
-the original repo was 2020 or 2021, idk, this project was made with the objective of teaching python to friend
+The original repo was made early of 2020, with the purpose of teaching Python to a dear Friend,  
+but I miss nuked the repo, luckly the code was backup.
 
 it's like a Mainecréft, but it is in python and it's not like Mainecréft
 
